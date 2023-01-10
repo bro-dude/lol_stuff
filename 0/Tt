@@ -1,0 +1,66 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v1706                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      Tt;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+#include "include/initialConditions"
+
+dimensions      [0 0 0 1 0 0 0];
+
+internalField   uniform $Ttr;
+
+boundaryField
+{
+    Wall_pylon_cavity
+    {
+        type            zeroGradient;
+    }
+    side_wall
+    {
+        type            zeroGradient;
+    }
+    back_inlet
+    {
+        type            zeroGradient;
+    }
+    front_inlet
+    {
+        type            fixedValue;
+        value           uniform $Ttr;
+    }
+    outlet
+    {
+        type            zeroGradient;
+    }
+    upper_wall
+    {
+        type            zeroGradient;
+    }
+    wedge_up
+    {
+        type            zeroGradient;
+    }
+    wedge_lower
+    {
+        type            zeroGradient;
+    }
+    SYMMETRY
+    {
+        type            symmetry;
+    }
+
+
+}
+
+// ************************************************************************* //

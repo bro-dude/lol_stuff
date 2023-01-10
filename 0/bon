@@ -1,0 +1,37 @@
+    Wall_pylon_cavity
+    {
+        type            wall;
+    }
+    side_wall
+    {
+        type            wall;
+    }
+    back_inlet
+    {
+        type            patch;
+    }
+    front_inlet
+    {
+        type            patch;
+    }
+    outlet
+    {
+        type            patch;
+    }
+    upper_wall
+    {
+        type            wall;
+    }
+    wedge_up
+    {
+        type            wall;
+    }
+    wedge_lower
+    {
+        type            wall;
+    }
+    SYMMETRY
+    {
+        type            symmetryPlane;
+    }
+

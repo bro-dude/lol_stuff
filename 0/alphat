@@ -1,0 +1,65 @@
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    arch        "LSB;label=32;scalar=64";
+    class       volScalarField;
+    location    "0";
+    object      alphat;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [1 -1 -1 0 0 0 0];
+
+internalField   uniform 3.072;
+
+boundaryField
+{
+    Wall_pylon_cavity
+    {
+        type            compressible::alphatWallFunction;
+        value           uniform 1;
+    }
+    side_wall
+    {
+        type            compressible::alphatWallFunction;
+        value           uniform 1;
+    }
+    back_inlet
+    {
+        type 		calculated;
+	value		uniform 1;
+    }
+    front_inlet
+    {
+        type            calculated;
+        value           uniform 1;
+    }
+    outlet
+    {
+        type            calculated;
+	value		uniform 1;
+    }
+    upper_wall
+    {
+        type            compressible::alphatWallFunction;
+        value           uniform 1;
+    }
+    wedge_up
+    {
+        type            compressible::alphatWallFunction;
+        value           uniform 1;
+    }
+    wedge_lower
+    {
+        type            compressible::alphatWallFunction;
+        value           uniform 1;
+    }
+    SYMMETRY
+    {
+        type            symmetry;
+    }
+
+}
+
+
