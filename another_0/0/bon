@@ -1,0 +1,40 @@
+cav_up_wall
+{
+    type wall;
+}
+
+cav_wall_down_stream
+{
+    type wall;
+}
+
+cav_wall_up_stream
+{
+    type wall;
+}
+
+inlet
+{
+    type patch;
+}
+
+outlet
+{
+    type patch;
+}
+
+pylon
+{
+    type wall;
+}
+
+side_wall
+{
+    type wall;
+}
+
+sym
+{
+    type symmetry;
+}
+
